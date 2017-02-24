@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Registration</string>
+    <string name="name_activity">Full name</string>
+    <string name="birthday_activity">Date of Birth</string>
+    <string name="about_me_activity">About me</string>
+    <string name="complete_activity">Information About Me</string>
+    <string name="btn_name">Name</string>
+    <string name="btn_birthday">Birthday</string>
+    <string name="btn_about">About me</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_close">Close App</string>
+    <string name="enter_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="enter_birthday">Your birthday</string>
+    <string name="enter_about">About me</string>
+</resources>
