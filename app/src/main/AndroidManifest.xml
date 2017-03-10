@@ -8,17 +8,29 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EnterNameActivity" android:label="@string/name_activity"></activity>
-        <activity android:name=".BirthdayActivity" android:label="@string/birthday_activity"></activity>
-        <activity android:name=".AboutMeActivity" android:label="@string/about_me_activity"></activity>
-        <activity android:name=".CompleteActivity" android:label="@string/complete_activity"></activity>
+        <activity
+            android:name=".EnterNameActivity"
+            android:label="@string/name_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BirthdayActivity"
+            android:label="@string/birthday_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutMeActivity"
+            android:label="@string/about_me_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompleteActivity"
+            android:label="@string/complete_activity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
