@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class AboutMeActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String USER_ABOUT = "user_about";
     private SharedPreferences sPref;
 
     private static final String SAVED_ME = "saved_me";
@@ -38,10 +39,10 @@ public class AboutMeActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.done_btn:
                 intent = new Intent();
-                intent.putExtra("user_about", aboutMeEdit.getText().toString());
+                intent.putExtra(USER_ABOUT, aboutMeEdit.getText().toString());
                 String user_about = aboutMeEdit.getText().toString();
                 if (user_about.matches("")) {
-                    Toast.makeText(this, "You did not enter all data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.not_enter_all_data), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 setResult(RESULT_OK, intent);

@@ -13,6 +13,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int BIRTHDAY = 2;
     private static final int ABOUT = 3;
 
+    private static final String USER_NAME = "user_name";
+    private static final String USER_LAST_NAME = "user_last_name";
+    private static final String USER_BIRTHDAY = "user_birthday";
+    private static final String USER_ABOUT = "user_about";
+
     private String name;
     private String last_name;
     private String birthday;
@@ -52,10 +57,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.register_button:
                 intent = new Intent(this, CompleteActivity.class);
-                intent.putExtra("user_name", name);
-                intent.putExtra("user_last_name", last_name);
-                intent.putExtra("user_birthday", birthday);
-                intent.putExtra("user_about", about_me);
+                intent.putExtra(USER_NAME, name);
+                intent.putExtra(USER_LAST_NAME, last_name);
+                intent.putExtra(USER_BIRTHDAY, birthday);
+                intent.putExtra(USER_ABOUT, about_me);
                 startActivity(intent);
                 break;
         }
@@ -67,14 +72,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (data != null) {
             switch (requestCode) {
                 case ENTER_NAME:
-                    name = data.getStringExtra("user_name");
-                    last_name = data.getStringExtra("user_last_name");
+                    name = data.getStringExtra(USER_NAME);
+                    last_name = data.getStringExtra(USER_LAST_NAME);
                     break;
                 case BIRTHDAY:
-                    birthday = data.getStringExtra("user_birthday");
+                    birthday = data.getStringExtra(USER_BIRTHDAY);
                     break;
                 case ABOUT:
-                    about_me = data.getStringExtra("user_about");
+                    about_me = data.getStringExtra(USER_ABOUT);
                     break;
 
             }

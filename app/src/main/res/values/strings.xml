@@ -15,4 +15,6 @@
     <string name="enter_last_name">Enter last name</string>
     <string name="enter_birthday">Your birthday</string>
     <string name="enter_about">About me</string>
+
+    <string name="not_enter_all_data">You did not enter all data</string>
 </resources>

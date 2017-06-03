@@ -10,15 +10,20 @@ import android.widget.TextView;
 
 public class CompleteActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String USER_NAME = "user_name";
+    private static final String USER_LAST_NAME = "user_last_name";
+    private static final String USER_BIRTHDAY = "user_birthday";
+    private static final String USER_ABOUT = "user_about";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.complete_main);
 
-        String userName = getIntent().getExtras().getString("user_name");
-        String userLastName = getIntent().getExtras().getString("user_last_name");
-        String userBirthday = getIntent().getExtras().getString("user_birthday");
-        String userAbout = getIntent().getExtras().getString("user_about");
+        String userName = getIntent().getExtras().getString(USER_NAME);
+        String userLastName = getIntent().getExtras().getString(USER_LAST_NAME);
+        String userBirthday = getIntent().getExtras().getString(USER_BIRTHDAY);
+        String userAbout = getIntent().getExtras().getString(USER_ABOUT);
 
         TextView textName = (TextView) findViewById(R.id.text_name);
         TextView textLastName = (TextView) findViewById(R.id.text_last_name);

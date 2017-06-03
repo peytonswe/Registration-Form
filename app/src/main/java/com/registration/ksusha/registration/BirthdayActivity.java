@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class BirthdayActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String USER_BIRTHDAY = "user_birthday";
+
     private SharedPreferences sPref;
 
     private static final String SAVED_DATE = "saved_date";
@@ -37,10 +40,10 @@ public class BirthdayActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.done_btn:
                 intent = new Intent();
-                intent.putExtra("user_birthday", birthdayEdit.getText().toString());
+                intent.putExtra(USER_BIRTHDAY, birthdayEdit.getText().toString());
                 String user_birthday = birthdayEdit.getText().toString();
                 if (user_birthday.matches("")) {
-                    Toast.makeText(this, "You did not enter all data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.not_enter_all_data), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 setResult(RESULT_OK, intent);

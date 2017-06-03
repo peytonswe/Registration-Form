@@ -17,6 +17,9 @@ public class EnterNameActivity extends AppCompatActivity implements View.OnClick
     private static final String SAVED_NAME = "saved_name";
     private static final String SAVED_LAST_NAME = "saved_last_name";
 
+    private static final String USER_NAME = "user_name";
+    private static final String USER_LAST_NAME = "user_last_name";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,16 +43,16 @@ public class EnterNameActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.done_btn:
                 intent = new Intent();
-                intent.putExtra("user_name", nameEdit.getText().toString());
+                intent.putExtra(USER_NAME, nameEdit.getText().toString());
                 String user_name = nameEdit.getText().toString();
                 if (user_name.matches("")) {
-                    Toast.makeText(this, "You did not enter all data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.not_enter_all_data), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                intent.putExtra("user_last_name", lastNameEdit.getText().toString());
+                intent.putExtra(USER_LAST_NAME, lastNameEdit.getText().toString());
                 String last_name = lastNameEdit.getText().toString();
                 if (last_name.matches("")) {
-                    Toast.makeText(this, "You did not enter all data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.not_enter_all_data), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 setResult(RESULT_OK, intent);
