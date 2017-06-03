@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 public class EnterNameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    SharedPreferences sPref;
+    private SharedPreferences sPref;
 
-    final String SAVED_NAME = "saved_name";
-    final String SAVED_LAST_NAME = "saved_last_name";
+    private static final String SAVED_NAME = "saved_name";
+    private static final String SAVED_LAST_NAME = "saved_last_name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,9 +12,9 @@ import android.widget.Toast;
 
 public class AboutMeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    SharedPreferences sPref;
+    private SharedPreferences sPref;
 
-    final String SAVED_ME = "saved_me";
+    private static final String SAVED_ME = "saved_me";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

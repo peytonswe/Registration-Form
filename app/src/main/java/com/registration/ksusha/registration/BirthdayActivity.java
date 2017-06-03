@@ -11,9 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class BirthdayActivity extends AppCompatActivity implements View.OnClickListener {
-    SharedPreferences sPref;
+    private SharedPreferences sPref;
 
-    final String SAVED_DATE = "saved_date";
+    private static final String SAVED_DATE = "saved_date";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
