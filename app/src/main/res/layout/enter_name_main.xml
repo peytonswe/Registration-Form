@@ -13,6 +13,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:gravity="center"
+        android:textAllCaps="true"
         android:hint="@string/enter_name"
         android:inputType="textPersonName" />
 
@@ -23,6 +24,7 @@
         android:layout_below="@id/name_edit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:textAllCaps="true"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/enter_last_name"
